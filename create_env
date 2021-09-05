@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# use this to create a fresh python virtual environment with all
+# dependencies installed
+
+# If you want to use python-venv uncomment the following section and
+# comment the rest (for conda users).
+
+######################## 
+# python3 -m venv venv
+# source venv/bin/activate
+# pip install -r requirements.txt
+######################## 
+
+line=$(conda env list | grep "tdc3")
+if [ -z "$line" ]
+then
+    conda env create --file environment.yml
+else
+    echo "environment already created"
+fi
+   
