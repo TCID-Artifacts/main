@@ -1,0 +1,23 @@
+{
+    "name": "CoDL",
+    "description": "",
+    "version": "0.1.0",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "dependencies": {
+        "acorn": "",
+        "argparse": "",
+        "csv-parser": "^3.0.0",
+        "diff": "",
+        "escodegen": "^2.0.0"
+    },
+    "devDependencies": {
+        "jest": ""
+    },
+    "scripts": {
+        "test": "jest"
+    }
+}

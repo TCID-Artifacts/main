@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ -z "$1" ] || [ -z "$2" ]
+then
+    echo "two input variables required: (1) path of the directory with data to be tokenized and (2) path of the directory to store the tokenized data"
+    exit
+fi
+
+INPUTDIR=$1
+OUTPUTDIR=$2
+
+# https://stackoverflow.com/questions/38558989/node-js-heap-out-of-memory
+# default heap size is 1.7 GB
+node --max-old-space-size=4096 loader.js --inputdir $INPUTDIR --outputdir $OUTPUTDIR

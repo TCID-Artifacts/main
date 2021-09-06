@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -z "$1" ] || [ -z "$2" ]
+then
+    echo "two input variables required: (1) path of the directory with data to be filtered and (2) path of the directory to store the filtered data"
+    exit
+fi
+
+INPUTDIR=$1
+OUTPUTDIR=$2
+
+python3 filter_pairs.py --inputdir $INPUTDIR --outputdir $OUTPUTDIR
