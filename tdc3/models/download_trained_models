@@ -1,0 +1,12 @@
+#!/bin/bash
+
+pip install gdown
+
+# dowload LSTM model (Trained on the automatically labeled dataset)
+gdown https://drive.google.com/uc?id=14tbeAPJMtiNTbsBwiPKWNwCsyQiQvrE2
+
+# dowload Transformer model (Trained on the automatically labeled dataset)
+gdown https://drive.google.com/uc?id=12207_plSg0VOSxTYS80rfEfZgznzT5gc
+
+# dowload Final model (Trained on the automatically labeled dataset and fine-tuned on the manually labeled dataset)
+gdown https://drive.google.com/uc?id=1Rp92jfVDQTsVCHwMTwjmf5LszNFNEOL_

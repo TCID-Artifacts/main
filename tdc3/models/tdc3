@@ -18,4 +18,4 @@ cd ../../models
 
 export PYTHONPATH=$(pwd)
 
-python3 py/main/Tdc3.py --CSV_file $CSV_file --JSON_dir $DIR_JSON --description_embedding ../data/embedded/description/embeddingModel --test_embedding ../data/embedded/test/embeddingModel --classification_model $(pwd)/final_model_epoch9 --max_body_length 60 --max_description_length 10
+python3 py/main/Tdc3.py --CSV_file $CSV_file --JSON_dir $DIR_JSON --description_embedding ../data/embedded/description/embeddingModel --test_embedding ../data/embedded/test/embeddingModel --classification_model $(pwd)/final_model --max_body_length 60 --max_description_length 10
