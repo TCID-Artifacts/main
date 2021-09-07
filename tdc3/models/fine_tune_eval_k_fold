@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export PYTHONPATH=$(pwd)
+
+python3 py/main/FineTuneEvaluateKfold.py --description_embedding ../data/embedded/description/embeddingModel --test_embedding ../data/embedded/test/embeddingModel --max_body_length 60 --max_description_length 10 --consistent_data ../data/labeled_tokenized/consistent/ --inconsistent_data ../data/labeled_tokenized/inconsistent/ --load_model transformer_model

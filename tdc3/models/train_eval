@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export PYTHONPATH=$(pwd)
+
+python3 py/main/TrainEvaluate.py --description_embedding ../data/embedded/description/embeddingModel --test_embedding ../data/embedded/test/embeddingModel --data ../data/tokenized/ --max_body_length 60 --store_validate_data ./validate_data --max_description_length 10

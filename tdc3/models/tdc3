@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ -z "$1" ] || [ -z "$2" ]
+then
+    echo "three input variables required:"
+    echo "(1) path of the directory containing a CSV file with test description pairs to be tokenized;"
+    echo "(2) path of the directory to store the tokenized pairs;"
+    exit
+fi
+
+DIR_CSV=$1
+DIR_JSON=$2
+CSV_file="${DIR_CSV}$(ls $DIR_CSV)"
+
+# tokenize the test body
+cd ../data/tokenizer/ && npm install && ./load ../../models/$DIR_CSV/ ../../models/$DIR_JSON/
+cd ../../models 
+
+export PYTHONPATH=$(pwd)
+
+python3 py/main/Tdc3.py --CSV_file $CSV_file --JSON_dir $DIR_JSON --description_embedding ../data/embedded/description/embeddingModel --test_embedding ../data/embedded/test/embeddingModel --classification_model $(pwd)/final_model_epoch9 --max_body_length 60 --max_description_length 10
