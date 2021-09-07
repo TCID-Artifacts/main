@@ -1,0 +1,1066 @@
+Description,Test,Project_name,File,Label
+"(name, value)
+chains
+","
+    expect(wrapper).to.have.style('border').equal('1px')
+    expect(wrapper.find('span')).to.have.style('color').equal('red')
+  
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/style.test.js,0
+"with decode = false
+decodes by default to utf-8
+","
+
+        needle.get('http://localhost:' + port, { decode: false }, function (err, resp) {
+          resp.body.should.be.a.String;
+          chardet.detect(resp.body).encoding.should.eql('ISO-8859-2');
+          resp.body.should.eql('Magyarországi Fióktelepe')
+          done();
+        })
+
+      
+",charliebarber/bloglist,https://github.com/charliebarber/bloglist/blob/master/node_modules/needle/test/decoder_spec.js,0
+"Server User on Initial Page Load
+it does not create a new server user with a new user
+","
+      cy.checkPlayerCount();
+    
+",TimMansell/vue-solitaire,https://github.com/TimMansell/vue-solitaire/blob/master/tests/e2e/specs/user.spec.js,0
+"regular attrs
+passes negated when attribute exists but has value `null`
+","
+        expect(wrapper.find('audio')).to.not.have.attr('spellcheck')
+        expect(wrapper.find('audio')).to.not.have.attr('spellCheck')
+      
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/attr.test.js,0
+"mediaQueries
+should have an ""xxl"" breakpoint
+","
+    const Div = styled.div`
+      ${mq.s`content: ""test"";`};
+    `;
+    const renderedComponent = shallow(<Div />);
+    expect(toJson(renderedComponent)).toMatchSnapshot();
+  
+",Mensae/portfolio-react-boilerplate,https://github.com/Mensae/portfolio-react-boilerplate/blob/master/app/styles/templates/tests/mediaQueries.test.js,0
+"(value)
+passes when the actual matches the expected
+","
+      expect(wrapper.find('input')).to.have.value('test')
+      expect(wrapper.find('textarea')).to.have.value('test')
+      expect(wrapper.find('select')).to.have.value('test')
+    
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/value.test.js,0
+"Gameboard: receiveAttack() (Check if attack is valid)
+Gameboard allows attack on a ship (3 attacks)
+","
+    const newGameboard = Gameboard(0, 8);
+    const newShip = Ship(0, 4, [], false, 'horizontal');
+    newGameboard.placeShip(newShip, [1, 3]);
+    newGameboard.receiveAttack([1, 3]);
+    expect(newShip.hits).toEqual([0]);
+    expect(newGameboard.grid[1][3]).toBe('H');
+    newGameboard.receiveAttack([1, 4]);
+    expect(newShip.hits).toEqual([0, 1]);
+    expect(newGameboard.grid[1][4]).toBe('H');
+    newGameboard.receiveAttack([1, 5]);
+    expect(newShip.hits).toEqual([0, 1, 2]);
+    expect(newGameboard.grid[1][5]).toBe('H');
+  
+",martink-rsa/Battleships,https://github.com/martink-rsa/Battleships/blob/master/src/specs/gameboard.test.js,0
+"stream_length set to invalid value
+sets Content-Length header to that value
+","
+      send_request({ stream_length: 5 }, function(err, resp) {
+        should.exist(err);
+        err.code.should.eql('ECONNRESET');
+        done()
+      })
+    
+",AnniePawl/JS-String-Library,https://github.com/AnniePawl/JS-String-Library/blob/master/node_modules/fsevents/node_modules/needle/test/request_stream_spec.js,0
+"Sum function
+to contain
+","
+     let arraycont = ['item1', 'item2', 'item3']
+     expect(array.addItem4(arraycont)).toContain('item4')
+   
+",Paulo-Dandrea/fullStackChallenges,https://github.com/Paulo-Dandrea/fullStackChallenges/blob/master/Bloco9/jest/testes.test.js,0
+"Text and Subfield Search
+Can perform a cast search with one cast member
+","
+    await MoviesDAO.injectDB(global.mflixClient)
+  
+
+    const filters = { cast: [""Elon Musk""] }
+    const { moviesList, totalNumMovies } = await MoviesDAO.getMovies({
+      filters,
+    })
+    expect(moviesList.length).toEqual(1)
+    expect(totalNumMovies).toEqual(1)
+    const firstMovie = moviesList[0]
+    expect(firstMovie[""title""]).toEqual(""Racing Extinction"")
+  
+",sourabh-repo/mflix-node-app,https://github.com/sourabh-repo/mflix-node-app/blob/master/test/text-subfield.test.js,0
+"substitute
+should substitute
+","
+      var input = [
+        bin('011000 010001 011110 111010'),
+        bin('100001 100110 010100 100111')
+      ];
+      var output = utils.substitute(input[0], input[1]);
+      assert.equal(output, bin('0101 1100 1000 0010 1011 0101 1001 0111'));
+    
+",matloc13/jest-test-blog,https://github.com/matloc13/jest-test-blog/blob/master/node_modules/des.js/test/utils-test.js,0
+"Credentials
+should generate an api_key
+","
+    cy.visit(APP_URL);
+
+    cy.get(""#header-login-button"").click();
+    cy.get(""#modal-login"");
+
+    cy.get(""#email-field"").type(""lucas@lucas.me"");
+    cy.get(""#password-field"").type(""1234"");
+    cy.get(""#submit-button"").click();
+
+    cy.wait(4000);
+    cy.visit(`${APP_URL}/credentials`);
+    cy.wait(2000);
+
+    const oldApiKey = cy.get(""#apikey"").invoke(""text"");
+    cy.get(""#generate-apikey"").click();
+    cy.wait(2000);
+    const newApiKey = cy.get(""#apikey"").invoke(""text"");
+
+    expect(oldApiKey).to.not.equal(newApiKey);
+  
+",lucas-salles/feedbacker,https://github.com/lucas-salles/feedbacker/blob/master/dashboard/tests/e2e/specs/credentials.js,0
+"Gameboard: receiveAttack() (Check if attack is valid)
+Gameboard allows attack on a ship (2 attacks)
+","
+    const newGameboard = Gameboard(0, 8);
+    const newShip = Ship(0, 3, [], false, 'horizontal');
+    newGameboard.placeShip(newShip, [1, 3]);
+    newGameboard.receiveAttack([1, 3]);
+    expect(newShip.hits).toEqual([0]);
+    expect(newGameboard.grid[1][3]).toBe('H');
+    newGameboard.receiveAttack([1, 4]);
+    expect(newShip.hits).toEqual([0, 1]);
+    expect(newGameboard.grid[1][4]).toBe('H');
+  
+",martink-rsa/Battleships,https://github.com/martink-rsa/Battleships/blob/master/src/specs/gameboard.test.js,0
+"(key, value)
+passes when the actual matches the expected
+","
+      expect(wrapper.find(User).first()).to.have.prop('index', 1)
+    
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/prop.test.js,0
+"test users route
+it should calss
+","
+        expect(1).toBe(1);
+    
+",sarangan/jest-test,https://github.com/sarangan/jest-test/blob/master/server.test.js,0
+"subnet() method
+should compute ipv4 network's first address
+","
+      assert.equal(ipv4Subnet.firstAddress, '192.168.1.129');
+    
+",lammypham/front-end-testing,https://github.com/lammypham/front-end-testing/blob/master/node_modules/ip/test/api-test.js,0
+"header()
+errors on invalid uri
+","
+
+            var header = Hawk.client.header(4, 'POST');
+            expect(header.field).to.equal('');
+            expect(header.err).to.equal('Invalid argument type');
+            done();
+        
+",xrgonzalezx/TodoJestTestDaily,https://github.com/xrgonzalezx/TodoJestTestDaily/blob/master/node_modules/hawk/test/client.js,0
+"when username is a valid string, and password is null
+Basic Auth only includes both username and password
+","
+      needle.get('localhost:' + port, opts, function(err, resp) {
+        var sent_headers = resp.body.headers;
+        var auth = get_auth(sent_headers['authorization']);
+        auth[0].should.equal('foobar');
+        auth[1].should.equal('');
+        done();
+      })
+    
+",gtwright/with-jest,https://github.com/gtwright/with-jest/blob/master/node_modules/needle/test/basic_auth_spec.js,0
+"Asincrono - Promise(resolve, reject)
+Promise - Promise(resolve, reject)
+","
+    const url = 'https://my-json-server.typicode.com/typicode/demo/posts';
+    axiosGet(url).then((datos) => {
+      const data = {
+        id: 1,
+        title: 'Post 1',
+      };
+      expect(datos.length).toBeGreaterThanOrEqual(1);
+      expect(datos[0].id).toBeGreaterThanOrEqual(1);
+      expect(datos[0]).toEqual(data);
+      done();
+    });
+  
+",joseluisgs/testing-js-jest,https://github.com/joseluisgs/testing-js-jest/blob/master/tests/asincrono.spec.js,0
+"app
+works
+","
+    cy.visit('/')
+      .findByText(/terms/i)
+      .click()
+      .findByText(/lorem ipsizzle/i)
+  
+",parmsang/gatsby-starter-ecommerce,https://github.com/parmsang/gatsby-starter-ecommerce/blob/master/cypress/e2e/smoke.js,0
+"cidrSubnet() method
+should compute an ipv4 network's first address
+","
+      assert.equal(ipv4Subnet.firstAddress, '192.168.1.129');
+    
+",szymonlankauf/Vue-jest,https://github.com/szymonlankauf/Vue-jest/blob/master/node_modules/ip/test/api-test.js,0
+"
+works just fine
+","
+  expect(1).toBe(1);
+
+",git-palace/jest,https://github.com/git-palace/jest/blob/master/integration_tests/verbose_reporter/__tests__/verbose-test.js,0
+"(name, value)
+fails when the actual does not match the expected
+","
+      expect(() => {
+        expect(wrapper).to.have.style('color', 'red')
+      }).to.throw(""to have a 'color' CSS style property"")
+
+      expect(() => {
+        expect(wrapper.find('span')).to.have.style('border', '2px')
+      }).to.throw(""to have a 'border' CSS style property"")
+
+      expect(() => {
+        expect(wrapper).to.not.have.style('border', '1px')
+      }).to.throw(""not to have a 'border' CSS style property"")
+
+      expect(() => {
+        expect(wrapper.find('span')).to.not.have.style('color', 'red')
+      }).to.throw(""not to have a 'color' CSS style property"")
+
+      expect(() => {
+        expect(wrapper).to.have.style('color', undefined)
+      }).to.throw(""to have a 'color' CSS style property"")
+    
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/style.test.js,0
+"comment Node
+should be loaded
+","
+        var flow = [{id:""n1"", type:""comment"", name: ""comment"" }];
+        helper.load(commentNode, flow, function() {
+            var n1 = helper.getNode(""n1"");
+            n1.should.have.property('name', 'comment');
+            done();
+        });
+    
+
+        helper.unload();
+    
+",crudaz/mongodb-testing,https://github.com/crudaz/mongodb-testing/blob/master/node_modules/node-red-node-test-helper/examples/comment_spec.js,0
+"regular attrs
+converts values to strings
+","
+        expect(wrapper.find('audio')).to.have.attr('contenteditable', 'false')
+        expect(wrapper.find('audio')).to.have.attr('rel', 'magic')
+      
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/attr.test.js,0
+"authenticateMessage()
+should fail authorization on invalid credentials
+","
+
+            credentialsFunc('123456', function (err, credentials1) {
+
+                var auth = Hawk.client.message('example.com', 8080, 'some message', { credentials: credentials1 });
+                expect(auth).to.exist();
+
+                var errFunc = function (id, callback) {
+
+                    callback(null, {});
+                };
+
+                Hawk.server.authenticateMessage('example.com', 8080, 'some message', auth, errFunc, {}, function (err, credentials2) {
+
+                    expect(err).to.exist();
+                    expect(err.message).to.equal('Invalid credentials');
+                    done();
+                });
+            });
+        
+",Sstobo/Jest-Testing,https://github.com/Sstobo/Jest-Testing/blob/master/node_modules/fsevents/node_modules/hawk/test/server.js,0
+"Uri
+should fail on empty bewit attribute
+","
+
+        var req = {
+            method: 'GET',
+            url: '/resource/4?bewit=YVxcY1xk',
+            host: 'example.com',
+            port: 8080
+        };
+
+        Hawk.uri.authenticate(req, credentialsFunc, {}, function (err, credentials, attributes) {
+
+            expect(err).to.exist();
+            expect(err.output.payload.message).to.equal('Missing bewit attributes');
+            done();
+        });
+    
+",xrgonzalezx/TodoJestTestDaily,https://github.com/xrgonzalezx/TodoJestTestDaily/blob/master/node_modules/fsevents/node_modules/hawk/test/uri.js,0
+"Package
+should follow dependencies
+","
+    let matchedDependency;
+    cy.visit(VISIT_URL); // direct visit
+    cy.getByTestId(""dependencies-tab"")
+      .getByText(/Dependencies \(/)
+      .click(); // open tab
+    cy.getByTestId(""dependencies-tab"")
+      .find(""a:first"")
+      .then(el => {
+        matchedDependency = Cypress.$(el).text();
+        return el;
+      })
+      .click() // click on first dependency
+      .then(() => cy.url().should(""contain"", `/package/${matchedDependency}@`));
+  
+",topheman/npm-registry-browser,https://github.com/topheman/npm-registry-browser/blob/master/cypress/integration/package.spec.js,0
+"constructed with no options
+doesn't modify the input string
+","
+            const text = 'some text';
+            const result = 'some text';
+
+            return test(text, result, done);
+        
+",defikabulan/keranjang-ppl,https://github.com/defikabulan/keranjang-ppl/blob/master/node_modules/ansi-to-html/test/ansi_to_html.js,0
+"css-select-base-adapter
+findOne
+","
+    assert( container )
+  
+",defikabulan/keranjang-ppl,https://github.com/defikabulan/keranjang-ppl/blob/master/node_modules/css-select-base-adapter/test/index.js,0
+"([ key, key, key... ])
+passes when the actual matches the expected
+","
+      expect(wrapper.find(User).first()).to.have.props([ 'index' ])
+    
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/props.test.js,0
+"DB service
+formatError
+","
+    const result = formatError();
+
+    expect(result).toEqual({
+      error: true,
+    });
+  
+",TimMansell/vue-solitaire,https://github.com/TimMansell/vue-solitaire/blob/master/src/services/db/__tests__/helpers.spec.js,0
+"scoreLinkText(linkText)
+penalizes -50 if pageNum is >= link text as num
+","
+    assert.equal(scoreLinkText('4', 5), -44);
+  
+",postlight/mercury-parser,https://github.com/postlight/mercury-parser/blob/master/src/extractors/generic/next-page-url/scoring/utils/score-link-text.test.js,0
+".on()
+should work
+","
+      obj.on('foo', console.log)
+        ._events['foo'].should.equal(console.log)
+    
+",gtwright/with-jest,https://github.com/gtwright/with-jest/blob/master/node_modules/emitter-mixin/test/person.js,0
+"
+.finderFunction - query builder for jsdom
+","
+  const dom = { getByText: jest.fn() }
+
+  Dom.finderFunction(dom)([""ByText"", ""a"", ""b""], ""get"")
+
+  expect(dom.getByText).toHaveBeenCalledWith(""a"", ""b"")
+
+",axehomeyg/jest-marmot,https://github.com/axehomeyg/jest-marmot/blob/master/__tests__/marmot/dom.test.js,0
+"({ key: value, ... })
+passes negated when the actual does not match the expected
+","
+      expect(wrapper.find(User).first()).to.not.have.props({ index: 2 })
+    
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/props.test.js,0
+"(selector)
+passes negated when the actual does not match the expected
+","
+      expect(wrapper.find('#root')).to.not.match('#child')
+      expect(wrapper.find('span')).to.not.match('#root')
+    
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/match.test.js,0
+"HAS_BOOLEAN_VALUE attrs
+passes negated when attribute exists but has value `false`
+","
+        expect(wrapper.find('video')).to.not.have.attr('hidden')
+      
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/attr.test.js,0
+"(key, value)
+chains
+","
+    expect(wrapper.find(User).first()).to.have.prop('index').equal(1)
+    expect(wrapper.find(User).first()).to.have.prop('objectProp').deep.equal({foo: 'bar'})
+  
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/prop.test.js,0
+"(key)
+passes when the actual matches the expected
+","
+      expect(wrapper.find(User).first()).to.have.prop('index')
+    
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/prop.test.js,0
+"<Requeriments />
+Render component requeriments
+","
+        expect(requeriments.length).toEqual(1);
+    
+",nkrowicki/woloxChallenge,https://github.com/nkrowicki/woloxChallenge/blob/master/src/__test__/components/Requeriments.test.js,0
+"<Benefits />
+Render component benefits
+","
+    expect(benefits.length).toEqual(1);
+  
+",nkrowicki/woloxChallenge,https://github.com/nkrowicki/woloxChallenge/blob/master/src/__test__/components/Benefits.test.js,0
+"(name, value)
+passes negated when the actual does not match the expected
+","
+      expect(wrapper).to.not.have.style('border', '2px')
+      expect(wrapper.find('span')).to.not.have.style('color', 'blue')
+    
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/style.test.js,0
+"mediaQueries
+should have an ""xl"" breakpoint
+","
+    const Div = styled.div`
+      ${mq.s`content: ""test"";`};
+    `;
+    const renderedComponent = shallow(<Div />);
+    expect(toJson(renderedComponent)).toMatchSnapshot();
+  
+",Mensae/portfolio-react-boilerplate,https://github.com/Mensae/portfolio-react-boilerplate/blob/master/app/styles/templates/tests/mediaQueries.test.js,0
+"HAS_BOOLEAN_VALUE attrs
+passes negated when attribute exists with a falsey (but not false/null/undefined) value
+","
+        expect(wrapper.find('video')).to.not.have.attr('autoplay')
+        expect(wrapper.find('video')).to.not.have.attr('autoPlay')
+      
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/attr.test.js,0
+"(selector)
+passes when the actual matches the expected
+","
+      expect(wrapper.find('#root')).to.match('#root')
+      expect(wrapper.find('span')).to.match('#child')
+    
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/match.test.js,0
+"(name)
+fails when the actual does not match the expected
+","
+      expect(() => {
+        expect(wrapper).to.have.style('color')
+      }).to.throw(""to have a 'color' CSS style property"")
+
+      expect(() => {
+        expect(wrapper.find('span')).to.have.style('border')
+      }).to.throw(""to have a 'border' CSS style property"")
+
+      expect(() => {
+        expect(wrapper).to.not.have.style('border')
+      }).to.throw(""not to have a 'border' CSS style property"")
+
+      expect(() => {
+        expect(wrapper.find('span')).to.not.have.style('color')
+      }).to.throw(""not to have a 'color' CSS style property"")
+    
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/style.test.js,0
+"(name)
+passes negated when the actual does not match the expected
+","
+      expect(wrapper).to.not.have.style('color')
+      expect(wrapper.find('span')).to.not.have.style('border')
+    
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/style.test.js,0
+"react jsx
+should handle hasOwnProperty correctly
+","
+    var code = '<hasOwnProperty>testing</hasOwnProperty>;';
+    var result = 'React.createElement(""hasOwnProperty"", null, ""testing"");';
+    expect(transform(code).code).toBe(result);
+  
+",Moverr/jestcodecov,https://github.com/Moverr/jestcodecov/blob/master/bluh/node_modules/jstransform/visitors/__tests__/react-jsx-test.js,0
+"({ key: value, ... })
+fails when the actual does not match the expected
+","
+      expect(() => {
+        expect(wrapper.find(User).first()).to.have.props({ index: 2 })
+      }).to.throw('to have props { index: 2 }')
+
+      expect(() => {
+        expect(wrapper.find(User).first()).to.not.have.props({ index: 1 })
+      }).to.throw('not to have props { index: 1 }')
+    
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/props.test.js,0
+"(nodes)
+passes when the actual matches the expected
+","
+      expect(wrapper).to.contain([<User index={2} />, <User index={3} />])
+    
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/contain.test.js,0
+"getBewit()
+returns a valid bewit value (null ext)
+","
+
+            var credentials = {
+                id: '123456',
+                key: '2983d45yun89q',
+                algorithm: 'sha256'
+            };
+
+            var bewit = Hawk.uri.getBewit('https://example.com/somewhere/over/the/rainbow', { credentials: credentials, ttlSec: 300, localtimeOffsetMsec: 1356420407232 - Hawk.utils.now(), ext: null });
+            expect(bewit).to.equal('MTIzNDU2XDEzNTY0MjA3MDdcSUdZbUxnSXFMckNlOEN4dktQczRKbFdJQStValdKSm91d2dBUmlWaENBZz1c');
+            done();
+        
+",Sstobo/Jest-Testing,https://github.com/Sstobo/Jest-Testing/blob/master/node_modules/fsevents/node_modules/hawk/test/uri.js,0
+"CanOpenModal
+should return true if all models have isTemporary to false
+","
+        const wrapper = shallow(<App {...props} />);
+        const { canOpenModal } = wrapper.instance();
+
+        expect(canOpenModal()).toBeTruthy();
+      
+",ticket721/server,https://github.com/ticket721/server/blob/master/plugins/content-type-builder/admin/src/containers/App/tests/index.test.js,0
+"header()
+returns a valid authorization header (null ext)
+","
+
+            var credentials = {
+                id: '123456',
+                key: '2983d45yun89q',
+                algorithm: 'sha256'
+            };
+
+            var header = Hawk.client.header('https://example.net/somewhere/over/the/rainbow', 'POST', { credentials: credentials, timestamp: 1353809207, nonce: 'Ygvqdz', payload: 'something to write about', contentType: 'text/plain', ext: null }).field;
+            expect(header).to.equal('Hawk id=""123456"", ts=""1353809207"", nonce=""Ygvqdz"", hash=""2QfCt3GuY9HQnHWyWD3wX68ZOKbynqlfYmuO2ZBRqtY="", mac=""HTgtd0jPI6E4izx8e4OHdO36q00xFCU0FolNq3RiCYs=""');
+            done();
+        
+",sethcarrino/redux-jest-testing,https://github.com/sethcarrino/redux-jest-testing/blob/master/node_modules/fsevents/node_modules/hawk/test/client.js,0
+"Testing Unit
+tan5(6+3)
+","
+	 assert.equal(a.eval(""tan5(6+3)""),""1"");
+  
+",MaxKoldun/Task-10-Tetsing,https://github.com/MaxKoldun/Task-10-Tetsing/blob/master/node_modules/math-expression-evaluator/test/index.js,0
+"replace-symbols
+should change complex symbols, if you feel like trolling yourself
+","
+    test('.foo { box-shadow: 1px 0.5em 3px $sass-a #f00 }',
+      {'1px': '1rem', '0.5em': '10px', '3px': '$sass-b', '$sass-a': '4px', '#f00': 'green' },
+      '.foo { box-shadow: 1rem 10px $sass-b 4px green }')
+  
+",tmtarpinian/jest_introduction,https://github.com/tmtarpinian/jest_introduction/blob/master/node_modules/icss-replace-symbols/test/index.js,0
+"#attr
+fails when the actual is not an enzyme wrapper
+","
+    [undefined, { foo: 'bar' }, [], 'test', 12345].forEach((actual) => {
+      expect(() => {
+        expect(actual).to.have.attr('key', 'somekey')
+      }).to.throw()
+    })
+  
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/attr.test.js,0
+"(node)
+passes when the actual matches the expected
+","
+      expect(wrapper).to.contain(<User index={1} />)
+      expect(wrapper).to.contain(<User index={2} />)
+    
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/contain.test.js,0
+"toConstant(src)
+handles ""(function () { while (true); return 10; }())""
+","
+    try {
+      constaninople.toConstant('(function () { while (true); return 10; }())')
+    } catch (ex) {
+      return
+    }
+    assert(false, '(function () { while (true); return 10; }()) should result in an error')
+  
+",KacperMitkowski/Node_React_Simple_API,https://github.com/KacperMitkowski/Node_React_Simple_API/blob/master/api/node_modules/constantinople/test/index.js,0
+"HAS_BOOLEAN_VALUE attrs
+passes negated when attribute exists but has value `null`
+","
+        expect(wrapper.find('video')).to.not.have.attr('controls')
+      
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/attr.test.js,0
+"header()
+generates header (null ext)
+","
+
+            var credentials = {
+                id: '123456',
+                key: 'werxhqb98rpaxn39848xrunpaw3489ruxnpa98w4rxn',
+                algorithm: 'sha256',
+                user: 'steve'
+            };
+
+            var artifacts = {
+                method: 'POST',
+                host: 'example.com',
+                port: '8080',
+                resource: '/resource/4?filter=a',
+                ts: '1398546787',
+                nonce: 'xUwusx',
+                hash: 'nJjkVtBE5Y/Bk38Aiokwn0jiJxt/0S2WRSUwWLCf5xk=',
+                mac: 'dvIvMThwi28J61Jc3P0ryAhuKpanU63GXdx6hkmQkJA=',
+                id: '123456'
+            };
+
+            var header = Hawk.server.header(credentials, artifacts, { payload: 'some reply', contentType: 'text/plain', ext: null });
+            expect(header).to.equal('Hawk mac=\""6PrybJTJs20jsgBw5eilXpcytD8kUbaIKNYXL+6g0ns=\"", hash=\""f9cDF/TDm7TkYRLnGwRMfeDzT6LixQVLvrIKhh0vgmM=\""');
+            done();
+        
+",sethcarrino/redux-jest-testing,https://github.com/sethcarrino/redux-jest-testing/blob/master/node_modules/hawk/test/server.js,0
+"({ key: value, ... })
+passes when the actual matches the expected
+","
+      expect(wrapper.find(User).first()).to.have.props({ index: 1 })
+    
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/props.test.js,0
+"BuildOptionsPopover component
+should work correctly for saving contracts
+","
+    const { component, functions } = setup(
+      3
+    );
+    expect(component.find(Popover).props().open).toBe(true);
+    const textField = component.find(TextField);
+    expect(textField).toHaveLength(1);
+    expect(component.find(Select)).toHaveLength(0);
+    expect(textField.props().value).toEqual('test.json');
+    textField.props().onChange();
+    expect(functions.handleChange).toHaveBeenCalledWith('fileName');
+    expect(functions.innerHandleChange).toHaveBeenCalledTimes(1);
+    const button = component.find(Button);
+    button.props().onClick();
+    expect(functions.saveContract).toHaveBeenCalledTimes(1);
+  
+",Sean2108/LATTE,https://github.com/Sean2108/LATTE/blob/master/test/components/BuildOptionsPopver.spec.js,0
+"(text)
+works with contain/include
+","
+      expect(wrapper.find('#child')).to.contain.text('Te')
+      expect(wrapper.find('#child')).to.include.text('Te')
+      expect(wrapper.find('#child')).to.not.contain.text('other')
+      expect(wrapper.find('#child')).to.not.include.text('other')
+    
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/text.test.js,0
+"fs module
+write/read/unlink (callbacks)
+","
+        fs.exists(TESTFILE, function(exists) {
+            if (exists) {
+                return done(""Pre-existing file ""+TESTFILE+""; aborting test."");
+            }
+            fs.writeFile(TESTFILE, 'hello', 'utf-8', function(err) {
+                if (err) { return done(err); }
+                fs.exists(TESTFILE, function(exists) {
+                    if (!exists) {
+                        return done(TESTFILE+"" not found"");
+                    }
+                    fs.readFile(TESTFILE, 'utf-8', function(err, contents) {
+                        if (err) { return done(err); }
+                        if (contents !== 'hello') {
+                            return done(""File contents are not right"");
+                        }
+                        fs.unlink(TESTFILE, function(err) {
+                            if (err) { return done(err); }
+                            fs.exists(TESTFILE, function(exists) {
+                                if (exists) {
+                                    return done(""unlink didn't work"");
+                                }
+                                done(/*success!*/);
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    
+",Tashinyimala/Unit-Testing-Jest,https://github.com/Tashinyimala/Unit-Testing-Jest/blob/master/node_modules/pn/test/fs.js,0
+"({ key: value, ... })
+chains
+","
+    expect(wrapper.find(User).first()).to.have.props([ 'index', 'objectProp' ]).deep.equal([ 1, {foo: 'bar'} ])
+  
+",xiaoxiaoqian1217/xxq-jest,https://github.com/xiaoxiaoqian1217/xxq-jest/blob/master/node_modules/chai-enzyme/test/props.test.js,0
+"invalid
+undef
+","
+      assert(!url(undefined));
+    
+",Lduplessier/JEST,https://github.com/Lduplessier/JEST/blob/master/node_modules/is-url/test/index.js,0
+"<Benefits />
+Render h1 component
+","
+    expect(benefits.find("".titleBenefits"").text()).toEqual(
+      ""benefits.titlebenefits.title2""
+    );
+  
+",nkrowicki/woloxChallenge,https://github.com/nkrowicki/woloxChallenge/blob/master/src/__test__/components/Benefits.test.js,0
+" test  Login
+Existance of Login components
+","
+    expect(wrapper).toBeDefined()
+  
+",steinko/todofrontend,https://github.com/steinko/todofrontend/blob/master/src/components/todo/login/Login-test.js,0
+"Log
+should console log our msg
+","
+		expect(log('test')).toBe(undefined);
+	
+",JoeKarlsson/react-redux-boilerplate,https://github.com/JoeKarlsson/react-redux-boilerplate/blob/master/src/server/helper/log.spec.js,0
+"*Group
+performs addGroup
+","
+      const res = actions.addGroup({ title: FIX_TITLE });
+      expect( res.payload.options.title ).toEqual( FIX_TITLE );
+    
+",dsheiko/puppetry,https://github.com/dsheiko/puppetry/blob/master/src/__tests__/action/actions.spec.js,0
+"mquery + callback
+works
+","
+          var m = mquery({ name: name });
+          mquery(col).remove(m, function(err) {
+            assert.ifError(err);
+            mquery(col).find(function(err, docs) {
+              assert.ifError(err);
+              assert.ok(docs);
+              assert.equal(1, docs.length);
+              assert.equal('shelly', docs[0].name);
+              done();
+            });
+          });
+        
+",charliebarber/bloglist,https://github.com/charliebarber/bloglist/blob/master/node_modules/mquery/test/index.js,0
+"ComputerAI: determineAttackType() (AI chooses correct attack)
+getSearchAttack() is chosen if only one ship hit exists
+","
+    const size = 8;
+    const newGameboardPlayer = Gameboard(0, size);
+    const computerAI = ComputerAI(0);
+    newGameboardPlayer.grid[3][3] = 'H';
+    const AIAttack = computerAI.determineAttackType(newGameboardPlayer);
+    expect(AIAttack).toBe('search');
+  
+",martink-rsa/Battleships,https://github.com/martink-rsa/Battleships/blob/master/src/specs/computerAI.test.js,0
+"ComputerAI: getAlignment() (set alignment from longest ships attacked)
+Horizontal alignment is found #1
+","
+    const size = 8;
+    const newGameboardPlayer = Gameboard(0, size);
+    const computerAI = ComputerAI(0);
+    newGameboardPlayer.grid[3][3] = 'H';
+    newGameboardPlayer.grid[3][4] = 'H';
+    newGameboardPlayer.grid[3][5] = 'H';
+    newGameboardPlayer.grid[3][6] = 'H';
+    newGameboardPlayer.grid[4][3] = 'H';
+    newGameboardPlayer.grid[4][4] = 'H';
+    newGameboardPlayer.grid[4][5] = 'H';
+    const alignment = computerAI.getAlignment(newGameboardPlayer);
+    expect(alignment).toMatchObject(['horizontal', [3, 3], [3, 6]]);
+  
+",martink-rsa/Battleships,https://github.com/martink-rsa/Battleships/blob/master/src/specs/computerAI.test.js,0
+"and the client uses streams
+should create a proper streams2 stream
+","
+        var stream = needle.get('localhost:' + port)
+
+        // newer node versions set this to null instead of false
+        var bool = !!stream._readableState.flowing;
+        should.equal(false, bool);
+
+        var readableCalled = false;
+        stream.on('readable', function() {
+          readableCalled = true;
+        })
+
+        stream.on('done', function() {
+          readableCalled.should.be.true;
+          done();
+        });
+
+        stream.resume()
+
+      
+",OdongoWaga/Vidly-API,https://github.com/OdongoWaga/Vidly-API/blob/master/node_modules/bcrypt/node_modules/needle/test/response_stream_spec.js,0
+"de-indent
+0 indent
+","
+    var str = '\nabc\n  bcd\n  cde\nefg'
+    var res = deindent(str)
+    assert.equal(str, res)
+  
+",szymonlankauf/Vue-jest,https://github.com/szymonlankauf/Vue-jest/blob/master/node_modules/de-indent/test.js,0
+"options
+should have filename option
+","
+        assert(ws.options.filename === 'logo.png');
+      
+",tupizz/playground-integrated-tests,https://github.com/tupizz/playground-integrated-tests/blob/master/node_modules/gridfs-stream/test/index.js,0
+"deleteList functionality
+deleteList works
+","
+        const result = await List.deleteList(email, listId1);
+
+        expect(result).toEqual({list_id: listId1});
+    
+",pritishakumar/gardenist,https://github.com/pritishakumar/gardenist/blob/master/backend/models/list.test.js,0
+"Hawk
+generates a header then successfully parse it (no server header options)
+","
+
+        var req = {
+            method: 'POST',
+            url: '/resource/4?filter=a',
+            headers: {
+                host: 'example.com:8080',
+                'content-type': 'text/plain;x=y'
+            }
+        };
+
+        var payload = 'some not so random text';
+
+        credentialsFunc('123456', function (err, credentials1) {
+
+            var reqHeader = Hawk.client.header('http://example.com:8080/resource/4?filter=a', req.method, { credentials: credentials1, ext: 'some-app-data', payload: payload, contentType: req.headers['content-type'] });
+            req.headers.authorization = reqHeader.field;
+
+            Hawk.server.authenticate(req, credentialsFunc, {}, function (err, credentials2, artifacts) {
+
+                expect(err).to.not.exist();
+                expect(credentials2.user).to.equal('steve');
+                expect(artifacts.ext).to.equal('some-app-data');
+                expect(Hawk.server.authenticatePayload(payload, credentials2, artifacts, req.headers['content-type'])).to.equal(true);
+
+                var res = {
+                    headers: {
+                        'content-type': 'text/plain'
+                    }
+                };
+
+                res.headers['server-authorization'] = Hawk.server.header(credentials2, artifacts);
+                expect(res.headers['server-authorization']).to.exist();
+
+                expect(Hawk.client.authenticate(res, credentials2, artifacts)).to.equal(true);
+                done();
+            });
+        });
+    
+",JamieDixon/jest-tester,https://github.com/JamieDixon/jest-tester/blob/master/webapp/node_modules/hawk/test/index.js,0
+".iaddn()
+should allow a sign change
+","
+      var a = new BN(-100);
+      assert.equal(a.negative, 1);
+
+      a.iaddn(200);
+
+      assert.equal(a.negative, 0);
+      assert.equal(a.toString(), '100');
+    
+",jstone28/react-with-jest,https://github.com/jstone28/react-with-jest/blob/master/node_modules/bn.js/test/arithmetic-test.js,0
+"Server User on Initial Page Load
+it does not create a new server user with an existing user
+","
+      localStorage.setItem('luid', mockUid);
+
+      cy.checkPlayerCount();
+    
+",TimMansell/vue-solitaire,https://github.com/TimMansell/vue-solitaire/blob/master/tests/e2e/specs/user.spec.js,0
+"Testing Unit
+check for constant inside Sigma
+","
+    assert.equal(a.lex(""Sigma1,3,2"",[{type:3,preced:0,ev:""x"",show:""x"",token:""x""}]).toPostfix().postfixEval({x:2}),6);
+  
+",dineshselvantdm/twitter-web-app,https://github.com/dineshselvantdm/twitter-web-app/blob/master/node_modules/math-expression-evaluator/test/index.js,0
+"TodoController.deleteTodo
+should handle 404
+","
+    TodoModel.findByIdAndDelete.mockReturnValue(null);
+    await TodoController.deleteTodo(req, res, next);
+    expect(res.statusCode).toBe(404);
+    expect(res._isEndCalled()).toBeTruthy();
+
+  
+",nickprihodko/jest-node-express,https://github.com/nickprihodko/jest-node-express/blob/master/test/unit/todo.controller.test.js,0
+"addList functionality
+addList works
+","
+        const result = await List.addList(email, listName);
+
+        expect(result).toEqual({
+            list_id: expect.any(Number),
+            list_name: listName
+        });
+    
+",pritishakumar/gardenist,https://github.com/pritishakumar/gardenist/blob/master/backend/models/list.test.js,0
+"showInvisibles
+shows invisibles
+","
+    assert.strictEqual(showInvisibles('1 2\n3\t4\r5'), '1·2⏎3↹4␍5');
+  
+",EduardaDalmas/Jest,https://github.com/EduardaDalmas/Jest/blob/master/node_modules/prettier-linter-helpers/test/index.test.js,0
+"sqlForPartialUpdate functionality
+sqlForPartialUpdate works
+","
+        const table = ""users""
+        const items = {
+            email: ""test@test.com"",
+            name: ""Test User""
+        };
+        const searchKey = {
+            key: ""email"",
+            value: ""test@test.com""
+        }
+        const keyArray = [""email"", ""name"", ""password""]
+        const returnVal = ""email, name""
+
+        const result = sqlForPartialUpdate(table, items, searchKey, keyArray, returnVal)
+        
+        expect(result).toEqual({
+            query: ""UPDATE users SET email=$1, name=$2 WHERE email=$3 RETURNING email, name"", 
+            values: [""test@test.com"", ""Test User"", ""test@test.com""]
+        });
+    
+",pritishakumar/gardenist,https://github.com/pritishakumar/gardenist/blob/master/backend/helpers/partialUpdate.test.js,0
+"when username is a valid string, but no username is passed
+Basic Auth only includes username, without colon
+","
+      needle.get('localhost:' + port, opts, function(err, resp) {
+        var sent_headers = resp.body.headers;
+        var auth = get_auth(sent_headers['authorization']);
+        auth[0].should.equal('foobar');
+        auth.should.have.lengthOf(1);
+        done();
+      })
+    
+",gtwright/with-jest,https://github.com/gtwright/with-jest/blob/master/node_modules/needle/test/basic_auth_spec.js,0
+"authenticate()
+errors on an missing host header
+","
+
+            var req = {
+                method: 'GET',
+                url: '/resource/4?filter=a',
+                headers: {
+                    authorization: 'Hawk id=""123"", ts=""1353788437"", nonce=""k3j4h2"", mac=""/qwS4UjfVWMcUyW6EEgUH4jlr7T/wuKe3dKijvTvSos="", ext=""hello""'
+                }
+            };
+
+            Hawk.server.authenticate(req, credentialsFunc, { localtimeOffsetMsec: 1353788437000 - Hawk.utils.now() }, function (err, credentials, artifacts) {
+
+                expect(err).to.exist();
+                expect(err.output.payload.message).to.equal('Invalid Host header');
+                done();
+            });
+        
+",swkane/redux-jest-todo,https://github.com/swkane/redux-jest-todo/blob/master/node_modules/fsevents/node_modules/hawk/test/server.js,0
+"dnsPrefetchControl
+continues onto the following middleware
+","
+    var app = use()
+
+    request(app).get('/')
+    .expect('Hello world!')
+    .end(done)
+  
+",john2796/Server-Testing-jb,https://github.com/john2796/Server-Testing-jb/blob/master/node_modules/dns-prefetch-control/test/index.js,0
+"Faces test suite
+should render faces
+","
+    const wrapper = getFaces(initialProps);
+    expect(wrapper.exists()).toBeTruthy();
+
+    expect(wrapper.find(Face).exists()).toBeTruthy();
+    expect(wrapper.find(Paragraph).exists()).toBeTruthy();
+  
+
+    initialProps.onFaceClick.mockClear();
+  
+",gasserandreas/rekognition,https://github.com/gasserandreas/rekognition/blob/master/src/images/detail/__tests__/Faces.test.js,0
+"<Hero />
+Render component hero
+","
+        expect(hero.length).toEqual(1);
+    
+",nkrowicki/woloxChallenge,https://github.com/nkrowicki/woloxChallenge/blob/master/src/__test__/components/Hero.test.js,0
+"gensync(function* () {})
+error inside body
+","
+    const fn = gensync(function*() {
+      yield* doError();
+    });
+
+    await expectResult(fn, undefined, {
+      error: DID_ERROR,
+      expectSync: true,
+      syncErrback: false,
+    });
+  
+",sarfojoe/teasting_with_jest,https://github.com/sarfojoe/teasting_with_jest/blob/master/diceproject/node_modules/gensync/test/index.test.js,0
+"::
+should respond with true
+","
+        assert.ok(ip.isLoopback('::'))
+      
+",Puritanic/React-Advanced-Concepts,https://github.com/Puritanic/React-Advanced-Concepts/blob/master/server-side-rendering/server/node_modules/ip/test/api-test.js,0
+"Testing Unit
+checks ^ operator
+","
+    assert.equal(a.lex(""2^2"").toPostfix().postfixEval(),4);
+  
+",MaxKoldun/Task-10-Tetsing,https://github.com/MaxKoldun/Task-10-Tetsing/blob/master/node_modules/math-expression-evaluator/test/index.js,0
+"PropertyController
+Property index
+","
+    const response = await request(app).get('/properties');
+
+    expect(response.body).toHaveProperty('result.property.id');
+  
+",EduardaDalmas/Jest,https://github.com/EduardaDalmas/Jest/blob/master/__tests__/integration/Property.test.js,0
+"Testing Unit
+ should check when 4C3
+","
+    assert.equal(a.lex(""4C3"").toPostfix().postfixEval(),4);
+  
+",Moverr/jestcodecov,https://github.com/Moverr/jestcodecov/blob/master/bluh/node_modules/math-expression-evaluator/test/index.js,0
+"proxies headers
+passed as on request
+","
+    http = express();
+    http.use(proxy('http://httpbin.org', {
+      headers: {
+        'X-Current-president': 'taft'
+      }
+    }));
+  
+
+    request(http)
+      .get('/headers')
+      .set('X-Powerererer', 'XTYORG')
+      .expect(200)
+      .end(function(err, res) {
+        if (err) { return done(err); }
+        assert(res.body.headers['X-Powerererer']);
+        done();
+      });
+  
+",Puritanic/React-Advanced-Concepts,https://github.com/Puritanic/React-Advanced-Concepts/blob/master/server-side-rendering/server/node_modules/express-http-proxy/test/headers.js,0
