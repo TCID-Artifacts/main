@@ -3,6 +3,7 @@
 To use the model we trained and fine-tuned to check conformance of test-description pairs, run:
 
 ```bash
+(tdc3) $> cd ./data && ./download_data.sh && cd ..
 (tdc3) $> cd ./models
 (tdc3) $> ./download_trained_models
 (tdc3) $> ./mkdir input
@@ -16,7 +17,7 @@ Finally, run:
 (tdc3) $> cd ./tdc3
 ```
 
-The predictions made by TDC3 for each given test-description pair must be on a column called TDC3Prediction of the CSV in the input folder.
+The predictions made by TDC3 for each given test-description pair must be on a column called TDC3Prediction of the CSV in the input folder. Lower predictions mean that the test description and the test are inconsistent.
 
 ## Reproduce TDC3
 
