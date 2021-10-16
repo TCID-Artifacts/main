@@ -126,8 +126,8 @@ if __name__ == "__main__":
     criterion = BCELoss()  # binary cross entropy
     if args.load_model is None:
         print(f"Training the classification model")
-        model = FunctionNameConsistencyModel(embedding_size).to(device)
-        # model = TransformerModel(embedding_size).to(device)
+        #model = FunctionNameConsistencyModel(embedding_size).to(device)
+        model = TransformerModel(embedding_size).to(device)
         optimizer = Adam(model.parameters(), lr=lr)
 
         training = Training(model, criterion, optimizer,
@@ -135,11 +135,11 @@ if __name__ == "__main__":
         validation = Validation(
             model, criterion, validate_loader, batch_size, max_body_length)
 
-        training.run("themodel", validation=validation)
+        training.run("transformer_model", validation=validation)
     else:
         print(f"Loading a trained model from {args.load_model[0]}")
-        model = FunctionNameConsistencyModel(embedding_size)
-        # model = TransformerModel(embedding_size)
+        #model = FunctionNameConsistencyModel(embedding_size)
+        model = TransformerModel(embedding_size)
         model.load_state_dict(t.load(args.load_model[0]))
         model.to(device)
 

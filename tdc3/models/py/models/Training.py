@@ -47,5 +47,5 @@ class Training():
 
             if store_model_path:
                 t.save(self.model.state_dict(),
-                       f"{store_model_path}_epoch{epoch}")
+                       f"{store_model_path}")
 
