@@ -1,15 +1,9 @@
 #!/bin/bash
 
-if [ -z "$1" ] || [ -z "$2" ]
-then
-    echo "three input variables required:"
-    echo "(1) path of the directory containing a CSV file with test description pairs to be tokenized;"
-    echo "(2) path of the directory to store the tokenized pairs;"
-    exit
-fi
+mkdir tokenized_input
 
-DIR_CSV=$1
-DIR_JSON=$2
+DIR_CSV=./input/
+DIR_JSON=./tokenized_input/
 CSV_file="${DIR_CSV}$(ls $DIR_CSV)"
 
 # tokenize the test body
