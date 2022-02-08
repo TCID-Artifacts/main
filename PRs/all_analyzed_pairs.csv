@@ -1,0 +1,133 @@
+Description,Updated Description,Project,File,PR Link,PR Status,Why discard?
+"Check Payment Status
+should be able to check payment status paid when property is credit_card","Check Payment Status
+should be able to check waiting_funds payment status  when property is credit_card",https://github.com/anderfilth/payment-service-provider,https://github.com/anderfilth/payment-service-provider/blob/master/src/app/components/payable/__tests__/unit/payableStatus.test.js,https://github.com/anderfilth/payment-service-provider/pull/17,Accepted,
+"MessageList.vue
+increments or decrement count when button is clicked","MessageList.vue
+FRUIT STORE is present in navbar",https://github.com/aalluinmar/vue-test-jest,https://github.com/aalluinmar/vue-test-jest/blob/master/test/App.test.js,https://github.com/aalluinmar/vue-test-jest/pull/1,Accepted,
+"Landing page
+App component render at first time","Sanity check
+true equals true",https://github.com/kmiloarguello/product-page-jumbo,https://github.com/kmiloarguello/product-page-jumbo/blob/master/src/__tests__/App.test.js,https://github.com/kmiloarguello/product-page-jumbo/pull/2,Accepted,
+"attributes data files returns array
+these tests prevent any issues and problems, also to break the structure of attributes","attributes
+should not be an empty string",https://github.com/GroceriStar/json-file-schema-validator,https://github.com/GroceriStar/json-file-schema-validator/blob/master/projects/server/tests/attribute.test.js,https://github.com/GroceriStar/json-file-schema-validator/pull/161,Accepted,
+"testing users screen
+renders users screen","testing users screen
+renders index screen",https://github.com/Gapur/place-management,https://github.com/Gapur/place-management/blob/master/src/__tests__/users/index.test.js,https://github.com/Gapur/place-management/pull/3,Accepted,
+"Connection goes through settup
+Passes connection","Database connection
+Connection is defined",https://github.com/aldeste/CrossWindowAuthPrototype,https://github.com/aldeste/CrossWindowAuthPrototype/blob/master/src/data/__tests__/index.test.js,https://github.com/aldeste/CrossWindowAuthPrototype/pull/1,Accepted,
+"`handleFilteringAndSorting` works as expected
+works correctly with default filters","handleFilteringAndSorting
+checks if all given customers are returned with default filters",https://github.com/JelenaStrbac/customer-manager,https://github.com/JelenaStrbac/customer-manager/blob/master/src/containers/Customers/CustomersList/CustomersList.test.js,https://github.com/JelenaStrbac/customer-manager/pull/10,Accepted,
+"testing sameElementsNaive
+should be return","testing sameElementsNaive
+checks if sameElementsNaive returns 1 when input is [1, 2, 3] and [3, 4, 5]",https://github.com/AlexandrPristupa/Today-I-Learned,https://github.com/AlexandrPristupa/Today-I-Learned/blob/master/__tests__/codesignal/sameElementsNaive.spec.js,https://github.com/AlexandrPristupa/Today-I-Learned/pull/7,Accepted,
+"<UserForm />
+call handleSubmit when the form is submitted","<UserForm />
+Mock ProfileContainer is present in DOM",https://github.com/ozovalihasan/track,https://github.com/ozovalihasan/track/blob/development/src/component/UserForm/test/UserForm.test.js,https://github.com/ozovalihasan/track/pull/4,Accepted,
+"projects
+gg g h j   kkl","projects
+checks if project with Novo projeto as title and Diego as owner is created",https://github.com/rosivaldo9/node-com-jest,https://github.com/rosivaldo9/node-com-jest/blob/master/test/projects.test.js,https://github.com/rosivaldo9/node-com-jest/pull/10,Accepted,
+"is called
+Should have the JD Accept header","JD Accept header is provided
+should create an OAuth with the Accept header",https://github.com/sourceallies/aws-oauth-1.0-proxy,https://github.com/sourceallies/aws-oauth-1.0-proxy/blob/master/test/SignAndDelete.test.js,https://github.com/sourceallies/aws-oauth-1.0-proxy/pull/73,Under Review,
+"clear display when AC button pressed
+clear display","clear display when AC button pressed
+checks that all fields are zero",https://github.com/Kirija-A/jest_testing-calculator_kirija,https://github.com/Kirija-A/jest_testing-calculator_kirija/blob/master/calculator.test.js,https://github.com/Kirija-A/jest_testing-calculator_kirija/pull/1,Under Review,
+"emit
+emits an event with two arguments","emit
+emits an event containing name and password arguments",https://github.com/13168335674/vue2-unit-jest,https://github.com/13168335674/vue2-unit-jest/blob/main/tests/unit/emit.spec.js,https://github.com/13168335674/vue2-unit-jest/pull/1,Under Review,
+"APP Tests
+Should render to app function","APP Tests
+checks that app is an instance of Function",https://github.com/dev-jpnobrega/graphql-babel-jest,https://github.com/dev-jpnobrega/graphql-babel-jest/blob/master/src/app/app.spec.js,https://github.com/dev-jpnobrega/graphql-babel-jest/pull/1,Under Review,
+"POST /refresh
+200 ? Nothing","Sanity check
+checks if true equals true",https://github.com/varmeh/express-configuration,https://github.com/varmeh/express-configuration/blob/master/src/api/services/services.test.js,https://github.com/varmeh/express-configuration/pull/13,Under Review,
+"The questions reducer
+simply works","Questions reducer
+Creates a new state by combining an existing state with a new question",https://github.com/rajjeet/jesting,https://github.com/rajjeet/jesting/blob/master/src/reducers/questions.spec.js,https://github.com/rajjeet/jesting/pull/1,Under Review,
+"getLanguageCondition
+getLanguageCondition without params","getLanguageCondition
+checks if getLanguageCondition without params is an empty string",https://github.com/dipiash/react-apollo-github-top-js-repos,https://github.com/dipiash/react-apollo-github-top-js-repos/blob/master/src/app/GithubApp/utils/__tests__/utils.test.js,https://github.com/dipiash/react-apollo-github-top-js-repos/pull/10,Under Review,
+"#dp
+Should return an incoming dp","#dp
+checks if returned dp equals to eight",https://github.com/Dale-/weapon_evolution_game_v2,https://github.com/Dale-/weapon_evolution_game_v2/blob/master/__tests__/model/armor_test.js,https://github.com/Dale-/weapon_evolution_game_v2/pull/1,Under Review,
+"IsMinLength()
+should returns true when isMinLength()","IsMinLength()
+checks if isMinLength() returns true",https://github.com/cristiano-pacheco/readable-udacity,https://github.com/cristiano-pacheco/readable-udacity/blob/master/client-app/tests/src/utils/validators/is-min-length.test.js,https://github.com/cristiano-pacheco/readable-udacity/pull/1,Under Review,
+"Auth
+Does not lowercase the USER:PASS","auth
+checks if username and password of parsed url are kept in capital letters",https://github.com/souza-david/hacking-with-react,https://github.com/souza-david/hacking-with-react/blob/master/node_modules/original/node_modules/url-parse/test.js,https://github.com/souza-david/hacking-with-react/pull/3,Under Review,
+"Create page
+should be able to create a meetup","Create page
+checks if meetup is created given title, description, localization, and date",https://github.com/DiegoVictor/meetapp-web,https://github.com/DiegoVictor/meetapp-web/blob/master/src/__tests__/components/pages/Create.test.js,https://github.com/DiegoVictor/meetapp-web/pull/1,Under Review,
+"Render, build and wire up a quasar component
+passes the sanity check and creates a wrapper","QBUTTON
+check QBUTTON is a Vue Instance",https://github.com/paulvanbladel/quasar-jest,https://github.com/paulvanbladel/quasar-jest/blob/master/quasar-with-quasar-cli/tests/unit/example.spec.js,https://github.com/paulvanbladel/quasar-jest/pull/2,Under Review,
+"HannyaRoller
+Is OK","HannyaRoller
+checks if 1 + 2 is equal to 3",https://github.com/eastend-street/travis_ci_practice,https://github.com/eastend-street/travis_ci_practice/blob/master/src/HannyaRoller.test.js,https://github.com/eastend-street/travis_ci_practice/pull/23,Under Review,
+"question list
+question list async should display a list of items","Sanity check
+2 plus 2 equals 4",https://github.com/asos-jasonp/testing-react-applications,https://github.com/asos-jasonp/testing-react-applications/blob/master/src/components/questionList.test.js,https://github.com/asos-jasonp/testing-react-applications/pull/2,Under Review,
+"Data props render
+Should have a {children}","ListOfBranchOffices
+Should have a children named Servipag L?der Arica with 12 people and 2:55 duration",https://github.com/nikosantis/centro-de-mando-zeroq,https://github.com/nikosantis/centro-de-mando-zeroq/blob/master/src/__test__/components/ListOfBranchOffices.test.js,https://github.com/nikosantis/centro-de-mando-zeroq/pull/2,Under Review,
+returns an object,check if the type of arrayAnalysis is an object,https://github.com/thsvr/Microverse-606-testing-jest,https://github.com/thsvr/Microverse-606-testing-jest/blob/development/arrayAnalysis.test.js,https://github.com/thsvr/Microverse-606-testing-jest/pull/10,Under Review,
+"Direction
+initiates Direction","Direction
+checks if the value of direction is N",https://github.com/Atska/MarsRover-Kata,https://github.com/Atska/MarsRover-Kata/blob/master/__tests__/direction.test.js,https://github.com/Atska/MarsRover-Kata/pull/1,Under Review,
+"Font Utils
+should verify is emphasys","Font Utils
+check if font-weight is 800 when is emphasys is true",https://github.com/wellitongervickas/credere-test,https://github.com/wellitongervickas/credere-test/blob/master/src/utils/font/index.test.js,https://github.com/wellitongervickas/credere-test/pull/32,Under Review,
+"applyUnit
+0","applyUnit
+check if applyUnit returns 0 given rem as unit and 0 as value",https://github.com/lazopm/ezpz,https://github.com/lazopm/ezpz/blob/master/src/util/__tests__/unit.js,https://github.com/lazopm/ezpz/pull/1,Under Review,
+"Transaction
+GET    >> /api/transactions","Transaction
+checks if GET of /api/transactions returns the transactions to an authorized user",https://github.com/KHNRV/bookstores-inventory-manager,https://github.com/KHNRV/bookstores-inventory-manager/blob/main/api/routes/__tests__/transactions.spec.js,https://github.com/KHNRV/bookstores-inventory-manager/pull/1,Under Review,
+"Car testing
+Car is a instance of Vehicle","Car testing
+Checks if vehicleMove has been called when Car moves",https://github.com/leomoreirarv/es6_jest,https://github.com/leomoreirarv/es6_jest/blob/master/src/car.class.test.js,https://github.com/leomoreirarv/es6_jest/pull/1,Under Review,
+"plusOne
+should return [1,2,9] if input is [1,2,3]","plusOne
+checks if plusOne returns [1,3,0] when input is [1,2,9]",https://github.com/onoumenon/kata,https://github.com/onoumenon/kata/blob/master/js/exercises/plusOne/solution.test.js,https://github.com/onoumenon/kata/pull/14,Under Review,
+"Name of the group
+should","getID
+checks if getID returns a string and a date",https://github.com/GenesisMauries/testing_laboratoria_jest,https://github.com/GenesisMauries/testing_laboratoria_jest/blob/master/__test__/test.js,https://github.com/GenesisMauries/testing_laboratoria_jest/pull/1,Under Review,
+"PATCH /categories/:id
+edits a category","PATCH /categories/:id
+Checks if the name of a category can be edited without errors ",https://github.com/johncmunson/todo-api,https://github.com/johncmunson/todo-api/blob/master/tests/integration/categories.test.js,https://github.com/johncmunson/todo-api/pull/9,Under Review,
+"Foo
+Has foo",,https://github.com/klarkc/jest_cov_bug,https://github.com/klarkc/jest_cov_bug/blob/master/src/foo.bad.spec.js,,,Inconsistent but arquived repo
+"testing removeBMW()
+Should remove bmw",,https://github.com/missKatiaPunter/jest-assertions-workshop,https://github.com/missKatiaPunter/jest-assertions-workshop/blob/main/index.spec.js,,,Inconsistent but test is removed from repo
+"JSON
+JSON.parse converts JSON strings to obejcts",,https://github.com/drpicox/learn-javascript-bytesting-jest,https://github.com/drpicox/learn-javascript-bytesting-jest/blob/master/specs/5.Objects.spec.js,,,Consistent (Paper example)
+"Testing Waste Container
+Should unmount component correctly",,https://github.com/miticous/test-ReactNative,https://github.com/miticous/test-ReactNative/blob/master/__tests__/containers/WasteContainer.test.js,,,Consistent
+"Header Component
+Should render without errors",,https://github.com/gowthamiallu5/counterapp-with-jest-and-enzyme,https://github.com/gowthamiallu5/counterapp-with-jest-and-enzyme/blob/master/src/Header.test.js,,,Consistent
+"Test port normalizer
+Should return false for invalid port number",,https://github.com/shaochuancs/reaclate,https://github.com/shaochuancs/reaclate/blob/master/__tests__/utils/utils-test.js,,,Consistent
+"Session
+Should be able to delete a session",,https://github.com/nicluo/galaxy-trading,https://github.com/nicluo/galaxy-trading/blob/master/galaxy-api-parser/api/sessions.test.js,,,Consistent
+"POST
+Should return 400 if genreId is invalid",,https://github.com/banobepascal/nodeJs-intergrationTests,https://github.com/banobepascal/nodeJs-intergrationTests/blob/master/tests/intergration/movies.test.js,,,Consistent
+"Beer display module
+createAbvParameter with selected option 3 returns expected text",,https://github.com/WojciechBaczynski/jest-tests-playground,https://github.com/WojciechBaczynski/jest-tests-playground/blob/master/js/script.spec.js,,,Consistent
+"POST A USER
+Should return a 201 status",,https://github.com/ilhamkaddouri/NodeJS-EXPRESS-MySQL,https://github.com/ilhamkaddouri/NodeJS-EXPRESS-MySQL/blob/master/tests/routes/user.route.test.js,,,Consistent
+"solution 1: iterative method
+return -1 when passed an empty array",,https://github.com/Tom0901/AlgorithmsWithTests,https://github.com/Tom0901/AlgorithmsWithTests/blob/main/binarySearch/bin.test.js,,,Consistent
+"Panel
+Succeeds",,https://github.com/Dagniele/react-unit-tests-example,https://github.com/Dagniele/react-unit-tests-example/blob/master/src/components/Panel/Panel.spec.js,,,Consistent
+"Profile component
+should render without error",,https://github.com/swapnahv/REACTJS-REDUX-JEST,https://github.com/swapnahv/REACTJS-REDUX-JEST/blob/master/src/containers/tests/profile.test.js,,,Consistent
+"Client
+handles JSX",,https://github.com/jxnblk/jest-projects-repro,https://github.com/jxnblk/jest-projects-repro/blob/master/test/client/index.js,,,Consistent
+"no props
+should not render title without props",,https://github.com/Kostruski/enzyme-jest,https://github.com/Kostruski/enzyme-jest/blob/master/src/component/headline/headline.test.js,,,Consistent
+"Header Component
+Should render without errors",,https://github.com/mesadhan/tdd-react-redux,https://github.com/mesadhan/tdd-react-redux/blob/master/src/components/layouts/header/header.spec.js,,,Consistent
